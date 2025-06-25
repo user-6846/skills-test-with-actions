@@ -25,4 +25,5 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
       - name: Run markdown lint
-        run: npx remark . --use remark-preset-lint-consistent --frail
+        run: |
+          npx -y remark-cli@latest . --use remark-preset-lint-consistent --frail
